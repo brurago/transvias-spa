@@ -1,0 +1,62 @@
+@import "mixins.scss";
+
+.navbar-header {
+	padding: 10px;
+	.navbar-toggle {
+		margin: 0 10px 0 0;
+	}
+}
+
+.header-brand {
+	display: block;
+	@include reset-spaces;
+	padding-top: 2px;
+	a {
+		text-indent: -9999px;
+		overflow: hidden;
+		width: 140px;
+		height: 31px;
+		display: block;
+		background: url(../images/transvias-logo.png) no-repeat;
+		background-size: 140px 31px;
+	}
+}
+
+.header-search {
+	max-width: 200px;
+	float: right;
+	margin-left: 4px;
+	.form-control {
+		height: auto;
+	}
+}
+
+// MEDIA QUERIES
+
+@media (min-width: 1024px) {
+	.navbar-header {
+		display: block;
+		width: 100%;
+		padding: 10px 0;
+	}
+	.navbar-nav {
+		display: table;
+		width: 100%;
+		li {
+			display: table-cell;
+			float: none;
+			a {
+				padding: 10px 5px;
+				text-align: center;
+				font-size: 12px;
+			}
+		}
+	}
+	.header-brand {
+		a {
+			width: 180px;
+			height: 40px;
+			background-size: 180px 40px;
+		}
+	}
+}
