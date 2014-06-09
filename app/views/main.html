@@ -25,7 +25,7 @@
         </a>
       </div>
       <div class="header-login pull-right">
-        <a href="#" class="btn btn-default">
+        <a href="#" class="btn btn-default" data-toggle="modal" data-target="#loginModal">
           <span class="glyphicon glyphicon-user"></span>
           <span class="hidden-xs">Entrar</span>
         </a>
@@ -100,3 +100,48 @@
     </div>
   </div><!--/span-->
 </div><!--/row-->
+
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title"><span class="glyphicon glyphicon-user"></span> Entrar</h4>
+      </div>
+      <div class="modal-body">
+      	<form role="form">
+      		<div class="row">
+      			<div class="col-xs-12 col-sm-8 col-sm-offset-2">
+							<div class="form-group">
+		      			<label for="exampleInputEmail1" class="sr-only">E-mail</label>
+		      			<input type="email" class="form-control input-lg" id="exampleInputEmail1" placeholder="Digite seu e-mail">
+		      		</div>
+		      		<div class="form-group">
+		      			<label for="exampleInputPassword1" class="sr-only">Senha</label>
+		      			<input type="password" class="form-control input-lg" id="exampleInputPassword1" placeholder="Digite sua senha">
+		      		</div>
+      				<button type="submit" class="btn btn-success btn-lg btn-block">Entrar</button>
+		      		<div class="checkbox zero-margin-bottom">
+						    <label>
+						      <input type="checkbox"> lembrar senha
+						    </label>
+						    <a href="#" class="pull-right">esqueci a senha</a>
+						  </div>
+						  <hr class="zero-margin-top">
+						  <div class="text-center">
+				      	<h4>Não é cadastrado?</h4>
+				      	<small>Cote o transporte da sua carga com mais de 2 mil transportadoras. Serviços, produtos e muito mais!</small>
+			      		<a href="#" class="btn btn-info btn-block plus-margin-top">
+			      			Cadastre-se gratuitamente!
+			      		</a>
+				    	</div>
+      			</div>
+      		</div>
+      	</form>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- Login Modal - End -->
