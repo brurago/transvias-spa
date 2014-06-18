@@ -11,19 +11,21 @@
       <h1 class="header-brand pull-left">
         <a href="#" alt="Transvias logotipo">Transvias</a>
       </h1>
-      <div class="header-search">
-        <div class="input-group hidden-xs">
-          <input type="text" class="form-control">
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="button">
-              <span class="glyphicon glyphicon-search"></span>
-            </button>
-          </span>
+      <form ng-controller="SearchCtrl">
+        <div class="header-search" ng-class="searchwidth">
+          <div class="input-group hidden-xs">
+            <input type="text" class="form-control" ng-focus="searchClassIn()" ng-blur="searchClassOut()">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </span>
+          </div>
+          <a href="#" class="btn btn-default visible-xs">
+            <span class="glyphicon glyphicon-search"></span>
+          </a>
         </div>
-        <a href="#" class="btn btn-default visible-xs">
-          <span class="glyphicon glyphicon-search"></span>
-        </a>
-      </div>
+      </form>
       <div class="header-login pull-right">
         <a href="#" class="btn btn-default" data-toggle="modal" data-target="#loginModal">
           <span class="glyphicon glyphicon-user"></span>

@@ -1,4 +1,6 @@
 @import "mixins.scss";
+@import "compass/css3/border-radius";
+@import "compass/css3/transition";
 
 .navbar-header {
 	padding: 10px;
@@ -26,8 +28,20 @@
 	max-width: 200px;
 	float: right;
 	margin-left: 4px;
+	@include transition-duration(.5s);
+	@include transition-timing-function(ease-in);
 	.form-control {
-		height: auto;
+		// height: auto;
+	}
+}
+
+.navbar-collapse.collapse {
+	.nav.navbar-nav {
+		.active {
+			a {
+				@include border-top-radius(6px);
+			}
+		}
 	}
 }
 
@@ -38,6 +52,14 @@
 		display: block;
 		width: 100%;
 		padding: 10px 0;
+	}
+	.header-search {
+		&.header-search-sm {
+		
+		}
+		&.header-search-lg {
+			max-width: 400px;
+		}
 	}
 	.navbar-nav {
 		display: table;
