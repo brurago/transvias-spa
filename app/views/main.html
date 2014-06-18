@@ -59,7 +59,7 @@
         <h1>Olá equipe do Transvias!</h1>
         <p>Este protótipo visa traduzir as wireframes já produzidas afim de avaliarmos a usabilidade do novo site e posteriormente aplicarmos design à todos os elementos.</p>
         <p>
-          <small>Por gentileza, teste a visualização desta página em diversos tipos de dispositivos.</small>
+          <small>Por gentileza, testem a visualização desta página em diversos tipos de dispositivos.</small>
         </p>
       </div>
       <div class="row">
@@ -122,8 +122,8 @@
 		      			<label for="exampleInputPassword1" class="sr-only">Senha</label>
 		      			<input type="password" class="form-control input-lg" id="exampleInputPassword1" placeholder="Digite sua senha">
 		      		</div>
-      				<button type="submit" class="btn btn-success btn-lg btn-block">Entrar</button>
-		      		<div class="checkbox zero-margin-bottom">
+      				<button type="submit" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#accountSelectionModal" data-dismiss="modal">Entrar</button>
+		      		<div class="checkbox">
 						    <label>
 						      <input type="checkbox"> lembrar senha
 						    </label>
@@ -145,3 +145,37 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <!-- Login Modal - End -->
+
+<!-- Seleção de Conta Modal -->
+<div class="modal fade" id="accountSelectionModal" tabindex="-1" role="dialog" aria-labelledby="accountSelectionModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title"><span class="glyphicon glyphicon-user"></span> Entrar</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form">
+          <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+              <div class="row">
+                <div class="col-xs-12 plus-margin-bottom">
+                  <h4 class="text-center">Por favor, selecione um tipo de conta:</h4>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <button type="submit" class="btn btn-info btn-lg btn-block plus-margin-bottom" data-dismiss="modal">Conta Usuário</button>
+                  <p class="text-center"><small><span class="glyphicon glyphicon-question-sign"></span> Se você deseja utilizar o portal Transvias para <strong>efetuar cotações</strong> com transportadoras e acessar outros serviços.</small></p>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <button type="submit" class="btn btn-warning btn-lg btn-block plus-margin-bottom" data-dismiss="modal">Conta Anunciante</button>
+                  <p class="text-center"><small><span class="glyphicon glyphicon-question-sign"></span> Se você é uma transportadora ou um fornecedor anunciante do portal Transvias e deseja <strong>gerenciar cotações</strong>.</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- Seleção de Conta - End -->
