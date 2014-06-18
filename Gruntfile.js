@@ -377,14 +377,14 @@ module.exports = function (grunt) {
     // FTP deploy
     ftp: {
       options: {
-          host: 'magnadev.hospedagemdesites.ws',
-          user: 'magnadev',
-          pass: 'mag74859'
+        host: 'magnadev.hospedagemdesites.ws',
+        user: 'magnadev',
+        pass: 'mag74859'
       },
       upload: {
-          files: {
-              'web/clientes/transvias/': '<%= yeoman.dist %>/*'
-          }
+        files: {
+          'web/clientes/transvias/': '<%= yeoman.dist %>/*'
+        }
       }
     }
   });
