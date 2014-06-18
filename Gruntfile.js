@@ -372,6 +372,20 @@ module.exports = function (grunt) {
         configFile: 'karma.conf.js',
         singleRun: true
       }
+    },
+
+    // FTP deploy
+    ftp: {
+      options: {
+          host: 'magnadev.hospedagemdesites.ws',
+          user: 'magnadev',
+          pass: 'mag74859'
+      },
+      upload: {
+          files: {
+              'web/clientes/transvias/': '<%= yeoman.dist %>/*'
+          }
+      }
     }
   });
 
@@ -418,12 +432,14 @@ module.exports = function (grunt) {
     'uglify',
     'rev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'ftp'
   ]);
 
   grunt.registerTask('default', [
     'newer:jshint',
     'test',
-    'build'
+    'build',
+    'ftp'
   ]);
 };
