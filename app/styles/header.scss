@@ -35,11 +35,31 @@
 	}
 }
 
+.header-logged {
+	position: relative;
+	button {
+		min-height: 33px;
+	}
+	.user-name {
+		margin-right: 50px;
+	}
+	.user-img {
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		right: 25px;
+		top: -4px;
+		border: 2px solid #269abc;
+	}
+}
+
 .navbar-collapse.collapse {
 	.nav.navbar-nav {
 		.active {
 			a {
 				@include border-top-radius(6px);
+				background-color: #5bc0de;
+				color: #FFF;
 			}
 		}
 	}
